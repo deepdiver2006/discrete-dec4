@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For YK ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+    135deg,
+    #07111f,
+    #132238,
+    #07111f
+    );
+
+    font-family:'Poppins',sans-serif;
+}
+
+/* Floating Stars */
+
+.stars{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:0.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+}
+
+/* Glass Card */
+
+.card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+    max-width:500px;
+
+    text-align:center;
+
+    padding:50px 35px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    color:white;
+
+    box-shadow:0 0 30px rgba(255,255,255,0.08);
+}
+
+.card h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:3rem;
+
+    color:#ffd6e7;
+
+    margin-bottom:15px;
+}
+
+.subtitle{
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+    color:#e5e5e5;
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:1rem;
+}
+
+button{
+
+    margin-top:20px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:white;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(255,255,255,0.2);
+}
+
+#error{
+
+    margin-top:20px;
+
+    color:#ffb4b4;
+}
+
+.hint{
+
+    margin-top:25px;
+
+    font-size:0.9rem;
+
+    color:#cccccc;
+}
+
+.fade{
+
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="card fade">
+
+    <h1>For YK ❤️</h1>
+
+    <p class="subtitle">
+        A small collection of memories,
+        moments and words.
+        <br>
+        Created especially for you.
+    </p>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password">
+
+    <button onclick="checkPassword()">
+        Begin The Journey ✨
+    </button>
+
+    <p id="error"></p>
+
+    <div class="hint">
+        Hint: The number of days between our beginning and your birthday.
+    </div>
+
+</div>
+
+<script>
+
+/* Password */
+
+function checkPassword(){
+
+    const password =
+    document.getElementById("password").value;
+
+    if(password === "213"){
+
+        window.location.href="index.html";
+    }
+
+    else{
+
+        document.getElementById("error").innerHTML =
+        "That's not the right key ❤️";
+    }
+}
+
+/* Stars */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+    const star =
+    document.createElement("div");
+
+    star.classList.add("star");
+
+    star.style.left =
+    Math.random()*100 + "%";
+
+    star.style.top =
+    Math.random()*100 + "%";
+
+    star.style.animationDelay =
+    Math.random()*3 + "s";
+
+    stars.appendChild(star);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,694 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+    width:100%;
+    background-image:url('../pics/walking.jpg');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.55);
+}
+
+/* CONTENT */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    width:90%;
+    max-width:800px;
+}
+
+.hero-content h1{
+    font-family:'Playfair Display',serif;
+    font-size:4rem;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.date{
+    margin-top:20px;
+    color:#ffd6e7;
+}
+
+.counter{
+    margin-top:25px;
+    font-size:1.3rem;
+    font-weight:500;
+    color:#ffe7a3;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:40px;
+
+    text-decoration:none;
+    color:white;
+
+    border:2px solid white;
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    transition:0.4s;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+    transform:translateY(-3px);
+}
+
+/* ANIMATIONS */
+
+.fade-in{
+    opacity:0;
+    animation:fadeIn 2s ease forwards;
+}
+
+.delay{
+    animation-delay:1s;
+}
+
+.delay2{
+    animation-delay:2s;
+}
+
+.delay3{
+    animation-delay:3s;
+}
+
+.delay4{
+    animation-delay:4s;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .counter{
+        font-size:1.1rem;
+    }
+
+    .btn{
+        padding:12px 24px;
+    }
+
+}
+
+
+
+
+/* STORY PAGE */
+
+.story-section{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(5,10,25,0.9),
+    rgba(10,15,35,0.95)
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 20px;
+}
+
+.story-container{
+
+    max-width:800px;
+
+    text-align:center;
+
+    color:white;
+}
+
+.story-container h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+    color:#ffd6e7;
+}
+
+.line{
+
+    width:120px;
+    height:3px;
+
+    background:white;
+
+    margin:25px auto;
+}
+
+.story-container p{
+
+    font-size:1.2rem;
+
+    line-height:2;
+
+    margin-bottom:10px;
+}
+
+.special-text{
+
+    color:#f3f3f3;
+}
+
+.story-container .btn{
+
+    margin-top:50px;
+}
+
+
+
+
+
+/* MEMORY PAGE */
+
+.memory-page{
+
+    min-height:100vh;
+
+    background:#07101f;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:50px;
+
+    flex-wrap:wrap;
+}
+
+.memory-image img{
+
+    width:350px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 30px rgba(255,255,255,0.15);
+}
+
+.memory-text{
+
+    max-width:600px;
+
+    color:white;
+}
+
+.memory-text h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:3rem;
+
+    color:#ffd6e7;
+
+    margin-bottom:20px;
+}
+
+.memory-text p{
+
+    line-height:2;
+
+    margin-bottom:15px;
+
+    font-size:1.1rem;
+}
+
+@media(max-width:768px){
+
+    .memory-image img{
+
+        width:90%;
+    }
+
+    .memory-text h1{
+
+        font-size:2rem;
+    }
+
+}
+
+
+
+
+
+/* MOMENTS PAGE */
+
+.moments-page{
+
+    background:#091423;
+
+    min-height:100vh;
+
+    padding:80px 20px;
+
+    color:white;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    font-family:'Playfair Display',serif;
+
+    margin-bottom:70px;
+
+    color:#ffd6e7;
+}
+
+.moment-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:50px;
+
+    margin-bottom:80px;
+
+    flex-wrap:wrap;
+}
+
+.reverse{
+
+    flex-direction:row-reverse;
+}
+
+.moment-card img{
+
+    width:350px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px rgba(255,255,255,0.15);
+}
+
+.moment-text{
+
+    max-width:500px;
+}
+
+.moment-text h2{
+
+    margin-bottom:20px;
+
+    color:#ffe7a3;
+
+    font-family:'Playfair Display',serif;
+}
+
+.moment-text p{
+
+    line-height:2;
+
+    margin-bottom:10px;
+}
+
+.next-btn{
+
+    display:block;
+
+    width:220px;
+
+    margin:40px auto;
+}
+
+@media(max-width:768px){
+
+    .section-title{
+
+        font-size:2rem;
+    }
+
+    .moment-card img{
+
+        width:90%;
+    }
+}
+
+
+
+
+
+/* ANIME PAGE */
+
+.anime-page{
+
+    min-height:100vh;
+
+    background:#08111f;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px 20px;
+}
+
+.anime-overlay{
+
+    text-align:center;
+
+    color:white;
+
+    max-width:800px;
+}
+
+.anime-overlay img{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:20px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 0 35px rgba(255,255,255,0.15);
+}
+
+.anime-overlay h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:3rem;
+
+    color:#ffd6e7;
+
+    margin-bottom:20px;
+}
+
+.anime-overlay p{
+
+    line-height:2;
+
+    margin-bottom:15px;
+}
+
+.highlight{
+
+    color:#ffe7a3;
+
+    font-size:1.2rem;
+
+    margin-top:20px;
+}
+
+@media(max-width:768px){
+
+    .anime-overlay h1{
+
+        font-size:2rem;
+    }
+
+}
+
+
+
+
+/* FINAL PAGE */
+
+.letter-page{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.75)
+    ),
+    url('../pics/moonlight.png');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.letter-overlay{
+
+    max-width:900px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    color:white;
+
+    text-align:center;
+}
+
+.letter-overlay h1{
+
+    font-size:3rem;
+
+    margin-bottom:30px;
+
+    color:#ffd6e7;
+}
+
+#typewriter{
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    min-height:250px;
+}
+
+.birthday-section{
+
+    margin-top:50px;
+}
+
+.birthday-section h2{
+
+    color:#ffe7a3;
+
+    margin-bottom:20px;
+}
+
+.ending{
+
+    margin-top:60px;
+
+    font-size:1.5rem;
+
+    color:#ffd6e7;
+}
+
+.stars{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    animation:starsMove 60s linear infinite;
+
+    opacity:0.3;
+
+    pointer-events:none;
+}
+
+@keyframes starsMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-300px);
+    }
+}
+
+
+
+body{
+    animation:fadePage 1s ease;
+}
+
+@keyframes fadePage{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+.final-btn{
+    margin-top:40px;
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+
+
+/* PAGE TRANSITION */
+
+body{
+    animation: pageFadeIn 1.2s ease;
+}
+
+@keyframes pageFadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+.fade-out{
+
+    opacity:0;
+
+    transform:translateY(-15px);
+
+    transition:all is ease;
+}
+
+
+.letter-overlay{
+
+    animation:floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+.secret-heart{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    text-decoration:none;
+
+    font-size:1.5rem;
+
+    opacity:0.15;
+
+    transition:0.4s;
+}
+
+.secret-heart:hover{
+
+    opacity:1;
+
+    transform:scale(1.3);
+}
